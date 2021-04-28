@@ -1,1 +1,23 @@
-<p>resultados works!</p>
+<!-- <ul>
+    <li *ngFor="let gif of results">
+        {{ gif.title }}
+    </li>
+</ul> -->
+
+<div class="row">
+    <div *ngFor="let gif of results"
+         class="col-md-4 col-sm-6">
+        <div class="card">
+            <!-- Aqui usamos el [src] para establecer el one way data binding -->
+            <img 
+                [src]="gif.images.downsized_medium.url" 
+                [alt]="gif.title"
+                class="card-img-top">
+            <div class="card-body">
+                <p class="card-text">
+                    {{ gif.title }}
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
